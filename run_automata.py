@@ -1,3 +1,6 @@
+# Author: Viacheslav Zhenylenko
+# TODO: Clean, complete unfinised parts, add comments
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,7 +10,6 @@ import random
 from math import sqrt
 import sys, getopt
 from config import *
-from config import FIGSIZE
 
 def get_rectangular_positions(n):
     positions = np.zeros(n, dtype=[('position', float, 2)])
