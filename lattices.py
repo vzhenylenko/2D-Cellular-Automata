@@ -1,25 +1,22 @@
 import random
 
-
 class Lattice:
 
     def __init__(self, size):
         pass
 
-
     def update(self):
         pass
 
-
     def get_stat_density(self):
         return sum(self.cells) / len(self.cells)
-
 
     def get_boundary_density(self):
         pass
 
 
 class OneDimLattice(Lattice):
+    
     def __init__(self, n, center_layout=None, init_prob=0.3):
         self.cells = [0] * n  # TODO: change to numpy array
         self.n = n
@@ -27,24 +24,24 @@ class OneDimLattice(Lattice):
     # TODO: different types of initiaization of 0 and 1s
 
 
-def initialize_cells(self, init_type, init_prob):
-    if init_type == 'random':
-        self.cells = [1 if random.uniform(0, 1) <= init_prob else 0 for i in range(self.m * self.n)]
-    elif init_type == 'center':
-        pass
-    elif init_type == 'center_random':
-        pass
-    else:
-        raise ValueError('Enter correct argument for intitial conditions')
-    return [0, 0, 0, 1]
+    def initialize_cells(self, init_type, init_prob):
+        if init_type == 'random':
+            self.cells = [1 if random.uniform(0, 1) <= init_prob else 0 for i in range(self.m * self.n)]
+        elif init_type == 'center':
+            pass
+        elif init_type == 'center_random':
+            pass
+        else:
+            raise ValueError('Enter correct argument for intitial conditions')
+        return [0, 0, 0, 1]
 
 
-def get_boundary_density(self):
-    count = 0
-    for i in range(n - 1):
-        if self.cells[i] != self.cells[i + 1]:
-            count += 1
-    return count
+    def get_boundary_density(self):
+        count = 0
+        for i in range(n - 1):
+            if self.cells[i] != self.cells[i + 1]:
+                count += 1
+        return count
 
 
 class TwoDimLattice(Lattice):
@@ -52,8 +49,6 @@ class TwoDimLattice(Lattice):
     # starts from right bottom place
 
     # Done
-
-
     def __init__(self, m, n,
              surface_type='tor',
              boundary_type='regular',
@@ -164,6 +159,7 @@ class TwoDimLattice(Lattice):
 # Done tor
 # todo other
 class RectangularLattice(TwoDimLattice):
+    
     def initialize_neigh_matrix(self, n, m, surface_type, neigh_type='regular'):
         self.neigh_type = neigh_type
 
@@ -192,6 +188,7 @@ class RectangularLattice(TwoDimLattice):
 # tor - done
 # other - todo
 class TriangularLattice(TwoDimLattice):
+    
     def initialize_neigh_matrix(self, n, m, boundary_type, neigh_type='regular'):
         self.neigh_matrix = []
         for i_n in range(n):
@@ -239,6 +236,7 @@ class TriangularLattice(TwoDimLattice):
 # tor - done
 # other - todo
 class HexagonalLattice(TwoDimLattice):
+    
     def initialize_neigh_matrix(self, n, m, boundary_type, neigh_type='regular'):
         self.neigh_matrix = []
         for i_n in range(n):
@@ -290,6 +288,7 @@ class CellularAutomata:
 
 # Todo
 class RandomCellularAutomata(CellularAutomata):
+    
     def update(self):
         # Calc sum + rand.uniform/gauss <-- add as parameter
         pass
