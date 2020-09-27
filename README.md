@@ -12,6 +12,8 @@ With this module you could: (TODO: add images)
 - **save** as gif
 - **analyse** results, build reports 
 
+## Configurations
+
 #### Lattice types:
 - rectangular
 - triangular
