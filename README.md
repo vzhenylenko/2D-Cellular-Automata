@@ -1,22 +1,42 @@
-# 2D-Cellular-Automata
-NOTE: Work in progress
-Simulation and visualisation in matplotlib of 2d cellular automata.
+# 2D-Cellular-Automaton
+**~~Under Development~\~**
 
-Possible 2d lattices:
--rectangular
--triangular
--hexagonal
+Simulation and visualisation in matplotlib of 2d cellular automatons.
 
-Possible surface form:
+## Overview 
+Check out the Wikipedia [article](https://en.wikipedia.org/wiki/Cellular_automaton) about cellular automaton.
+With this module you could: (TODO: add images)
+- **configure** your automaton
+- **explore** properties
+- **visualise** them
+- **save** as gif
+- **analyse** results, build reports 
+
+#### Lattice types:
+- rectangular
+- triangular
+- hexagonal
+
+#### Boundary relation (induce "shape" of simulation surface):
 - flat square
-- torus
 - cylinder
-- moebius strip
+- Moebius strip
+- torus
+- Kleine bottle
+- sphere
 
-Possible neighbourhood types for square lattice:
+#### Neighbourhood types (for square lattice):
 - Von Neunman neigbourhood
 - Moore neigbourhood
 
-Possible rules:
+#### Possible rules:
 - classical
 - custom
+
+## Installation
+
+## Examples of usage:
+`python experiment.py -id 1`
+
+Randomly initialised 100x100 grid will look like:
+<img src="images/random_init.png" width="400"/> 

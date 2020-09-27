@@ -1,16 +1,19 @@
+from abc import ABCMeta, abstractmethod
 import random
 
-class Lattice:
+class Lattice(metaclass=ABCMeta):
 
     def __init__(self, size):
         pass
 
+    @abstractmethod
     def update(self):
         pass
 
     def get_stat_density(self):
-        return sum(self.cells) / len(self.cells)
+        return sum(self.cells) / len(self.cells) # TODO: change - if array
 
+    @abstractmethod
     def get_boundary_density(self):
         pass
 
