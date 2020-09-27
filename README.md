@@ -41,4 +41,5 @@ With this module you could: (TODO: add images)
 `python experiment.py -id 1`
 
 Randomly initialised 100x100 grid will look like:
+
 <img src="images/random_init.jpeg" width="400"/> 
